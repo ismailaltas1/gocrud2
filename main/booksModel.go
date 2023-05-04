@@ -1,9 +1,7 @@
 package main
 
-import "go.mongodb.org/mongo-driver/bson/primitive"
-
 type Book struct {
-	ID     primitive.ObjectID `json:"_id"`
-	Title  string             `json:"title"`
-	Author string             `json:"author"`
+	ID     string `json:"_id" bson:"_id"`
+	Title  string `json:"title" bson:"title"`
+	Author string `json:"author" bson:"author"`
 }
